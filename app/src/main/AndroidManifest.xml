@@ -13,7 +13,8 @@
 
         <service
             android:name=".NotificationListener"
-            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+			android:exported="true">
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService" />
             </intent-filter>
@@ -22,7 +23,8 @@
         <activity
             android:icon="@mipmap/ic_continue_on_pc"
             android:name=".ContinueOnPc"
-            android:label="Continue on PC">
+            android:label="Continue on PC"
+			android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -37,7 +39,8 @@
         <activity
             android:icon="@mipmap/ic_open_in_browser"
             android:name=".LinkOpener"
-            android:label="Open in Browser">
+            android:label="Open in Browser"
+			android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -47,7 +50,8 @@
                 <data android:scheme="kakatalkinappbrowser" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+			android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
